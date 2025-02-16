@@ -23,6 +23,19 @@ body {
     align-items: center;
 }
 
+.navbar h4 {
+    margin: 0;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 .navbar ul {
     list-style: none;
     padding: 0;
@@ -154,6 +167,29 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
     .profile-pic {
         float: none;
         display: block;
